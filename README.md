@@ -3,6 +3,6 @@
 
 # 安装依赖
 ~~~js
-npm install electron --save@2.0.8
+npm install electron --save@1.8.8
 npm start
 ~~~
