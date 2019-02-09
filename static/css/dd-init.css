@@ -1,0 +1,393 @@
+
+/* init */
+.dd-clear { zoom:1; }
+.dd-clear:after { content:''; display:block; clear:both; }
+.dd-fl { float:left; }
+.dd-fr { float:right; }
+.dd-db{
+    display: block;
+}
+/* 标题带前标记的 */
+.dd-title{
+  font-size: 12pt;
+  font-weight: bold;
+  margin:10pt 0;
+}
+.dd-title::before{
+  content: "| ";
+  color:red;
+  font-weight: bold;
+}
+/* 默认的分块 */
+.dd-kuai{
+    background:#fff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/*大段的文字  */
+.dd-column{
+  font-size: 11pt;
+  padding: 0pt;
+}
+
+.dd-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.dd-column{
+    display: flex;
+    flex-direction: column;
+}
+
+/*固定到底部  */
+.dd-fixed-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+/*固定到顶部  */
+.dd-fixed-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* flex水平居中同时垂直居中 */
+.dd-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.dd-text-center {
+  text-align: center;
+}
+
+
+/* 水平居中 */
+.dd-h-center{
+    justify-content: center;
+    text-align: center;
+}
+/* 垂直居中 */
+.dd-v-center{
+    align-items: center;
+}
+/* 一个内部元素 水平靠右边 */
+.dd-h-right{
+    justify-content: flex-end;
+}
+/* 两个内部元素 靠在两边 */
+.dd-h-2side{
+    justify-content: space-between;
+}
+
+/* 字符靠左  */
+.dd-text-left{
+  text-align: left;
+}
+
+/* 字符靠右  */
+.dd-text-right{
+  text-align: right;
+}
+
+/* 另一边宽度固定后， 这边宽度自适应  */
+.dd-flex1{
+    flex: 1;
+}
+/* 块元素化 */
+.dd-db{
+    display: block;
+}
+/* input 样式 */
+.dd-input{
+    min-width: 100pt;
+    flex: 1;
+    /* max-width: 180pt; */
+
+    height:auto;
+
+    font-size: 12pt;
+}
+
+
+/* 省略多余的文字 */
+
+.dd-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 全屏显示 */
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 常用 margin padding  */
+.dd-mgt10{
+  margin-top: 10pt;
+}
+.dd-mgt20{
+  margin-top: 20pt;
+}
+.dd-mgb10{
+  margin-bottom: 10pt;
+}
+.dd-mgb20{
+  margin-bottom: 20pt;
+}
+
+/*  模态框  */
+.dd-model{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+/* 块 小程序内部的默认分块  */
+.kuai{
+  box-sizing: border-box;
+  box-shadow: 0 0 5pt #ccc;
+  width: 90%;
+  margin:0 5%;
+  padding: 8pt;
+}
+/* dd-btn 按钮样式 注意：root 在小程序里还用不了 */
+:root{
+    --btn-padding:3pt 13pt;
+}
+.dd-btn-red{
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #c82333;
+    color: white;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: center;
+    padding: 3pt 13pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.dd-btn-red:hover{
+    background-color: #b11f2d;    
+}
+
+
+/* 圆角red btn */
+.dd-btn-red-c {
+    border: 1pt solid transparent;
+    width: 200pt;
+    height: 26pt;
+    background: #c82333;
+    color: white;
+    border-radius: 20pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 12pt;
+    box-shadow: 0 0 5pt #ccc;
+  }
+
+.dd-btn-ccc{
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: center;
+    padding: var(--btn-padding);
+}
+.dd-btn-ccc:hover{
+    background-color: rgb(161, 160, 160);
+}
+.dd-btn-yellow{
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: rgb(228, 228, 44);
+    color: #000000;
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: center;
+    padding:3pt 13pt;
+}
+.dd-btn-yellow:hover{
+    background-color: #97a834;
+}
+
+/* 圆角btn */
+.dd-btn-yellow-c {
+  border: 1pt solid transparent;
+  width: 200pt;
+  height: 26pt;
+  background: #e2ca2e;
+  border-radius: 20pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 12pt;
+  box-shadow: 0 0 5pt #ccc;
+}
+
+.dd-btn-default {
+  border: 1pt solid #000;
+  width: 200pt;
+  height: 26pt;
+  background: transparent;
+  border-radius: 20pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 12pt;
+  box-shadow: 0 0 5pt #ccc;
+}
+
+.dd-btn-green{
+    color: #fff;
+    border: 1pt solid transparent;
+    width: 200pt;
+    height: 26pt;
+    background: #93da95;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 12pt;
+    box-shadow: 0 0 5pt #ccc;
+  }
+  .dd-btn-green-c{
+    color: #fff;
+    border: 1pt solid transparent;
+    width: 200pt;
+    height: 26pt;
+    background: #93da95;
+    border-radius: 20pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 12pt;
+    box-shadow: 0 0 5pt #ccc;
+  }
+
+/* 默认圆形的按钮 尺寸可以更改  */
+.dd-btn-circle{
+    width: 20pt;
+    height: 20pt;
+    background: #f1f1f1;
+    border: 2pt solid #ccc;
+    border-radius: 50%;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* color */
+/* 常用颜色 */
+.dd-c_o{
+  color: orange;
+}
+
+.dd-c_c{
+  color: #ccc;
+}
+.dd-c_r{
+  color: red;
+}
+.dd-mistake{
+    font-size:10pt;
+    text-align:center;
+}
+
+/* 表单的每一行 */
+.dd-formLine{
+    background: #fffff1;
+    height: 35pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1pt solid #444;
+    align-items: center;
+    
+}
+
+/* label */
+.dd-label{
+    font-size: 11pt;
+    font-weight: bold;
+    min-width: 50pt;
+    max-width: 80pt;
+    padding:0 5pt;
+    text-align: left;
+}
+
+
+/* 这里写 注册 登陆 重登 的 组件的样式*/
+.dd-top-tips{
+    z-index: 999;
+    height: 20pt;
+    background: #7b103a;
+    color:#fff;
+    font-size:11pt;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100vw;
+}
+
+/* 包裹 dd-input 的标签 */
+.dd-input-cell{
+    flex: 1;
+    /* background: #fff; */
+    margin: 0;
+    padding: 0;
+}
+/* dd-input 右边的部分 */
+.dd-input-right{
+    max-width: 100pt;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #f1f1f1;
+    text-align: center;
+    font-size: 10pt;
+}
+
+
+
+
+
+
+
+
+
+/* end init */

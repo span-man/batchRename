@@ -1,0 +1,43 @@
+*{
+    font-family: "微软雅黑"
+}
+
+.dd-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+html,body {
+     background: #212934;
+     font-size: 12px;
+}
+label{
+}
+.all{
+   
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.myForm {
+    margin: 15px 10px;
+    padding: 12px 10px;
+    /* background-color: #fff; */
+}
+
+
+.control-div{
+    width: 70px;
+    color: #ffce92;
+}
+
+.dd-title{
+    color: #ffce92;
+}
+
+.dd-c_r{
+    font-weight: bold;
+}

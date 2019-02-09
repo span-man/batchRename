@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./static/css/bootstrap.css">
+  <link rel="stylesheet" href="./static/css/dd-reset.css">
+  <link rel="stylesheet" href="./static/css/dd-init.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+
+<body>
+  <div class="all ">
+    <div class="dd-title">文件名部分批量替换</div><span class="dd-c_r">eg:把 "123zzz1523" 中的 "zzz" 换成 "yyy"</span>
+    <div class="myForm">
+      <div class="form-group dd-row">
+        <div for="path" class="col-sm-2 control-div">路径:</div>
+        <div class="col-sm-10">
+          <input id="path" class="form-control" type="text" placeholder="复制文件夹的路径 即此操作在此文件夹中进行">
+        </div>
+      </div>
+      <div class="form-group dd-row">
+        <div class="col-sm-2 control-div" for="changeBefore">From:</div>
+        <div class="col-sm-10">
+          <input id="changeBefore" class="form-control" type="text" placeholder="要替换的文字">
+        </div>
+      </div>
+      <div class="form-group dd-row">
+        <div class="col-sm-2 control-div" for="changeAfter">To:</div>
+        <div class="col-sm-10">
+          <input id="changeAfter" class="form-control" type="text" placeholder="替换成">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <button class="col-sm-2 btn btn-primary " type="submit" onclick="confirm()">确定</button>
+      </div>
+    </div>
+
+    <hr>
+    <div class="dd-title">欧美剧剧名精简</div><span class="dd-c_r">eg:把 "xxxS03E06xxx" 精简为 剧名.S03E06.mp4(文件格式)</span>
+    <div class="myForm">
+      <div class="form-group dd-row">
+        <div for="path2" class="col-sm-2 control-div">路径:</div>
+        <div class="col-sm-10">
+          <input id="path2" class="form-control" type="text" placeholder="复制文件夹的路径 即此操作在此文件夹中进行">
+        </div>
+      </div>
+      <div class="form-group dd-row">
+        <div for="videoName" class="col-sm-2 control-div">剧名:</div>
+        <div class="col-sm-10">
+          <input id="videoName" class="form-control" type="text" placeholder="剧名">
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <button class="col-sm-2 btn btn-primary " type="submit" onclick="confirm2()">确定</button>
+      </div>
+    </div>
+
+    <hr>
+    <!-- <h1>模板</h1>
+        <div class="dd-title">欧美剧剧名精简</div><span class="dd-c_r">eg:把 "xxxS03E06xxx" 精简为 剧名.S03E06.mp4(文件格式)</span>
+        <div class="myForm">
+            <div class="form-group dd-row">
+                <div for="path" class="col-sm-2 control-div">路径:</div>
+                <div class="col-sm-10">
+                    <input id="path" class="form-control" type="text" placeholder="复制文件夹的路径 即此操作在此文件夹中进行">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <button class="col-sm-2 btn btn-primary " type="submit" onclick="confirm()">确定</button>
+            </div>
+        </div> -->
+
+  </div>
+
+</body>
+<script>
+  const ipc = require('electron').ipcRenderer
+  let oDirName = document.getElementById("path");
+  let oChangeBefore = document.getElementById("changeBefore");
+  let oChangeAfter = document.getElementById("changeAfter");
+
+  function confirm() {
+    console.log("点击了");
+    let obj = {
+      dirName: oDirName.value,
+      changeBefore: oChangeBefore.value,
+      changeAfter: oChangeAfter.value
+    }
+    console.log("obj--->", obj)
+    ipc.send('add', obj)
+  }
+
+  let oDirName2 = document.getElementById("path2");
+  let oVideoName = document.getElementById("videoName");
+
+  function confirm2() {
+    console.log("点击了 欧美剧名精简的确定");
+    let obj = {
+      dirName: oDirName2.value,
+      videoName: oVideoName.value,
+    }
+    console.log("obj--->", obj)
+    ipc.send('jingjian', obj)
+  }
+</script>
+
+</html>

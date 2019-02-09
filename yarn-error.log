@@ -1,0 +1,36 @@
+Arguments: 
+  E:\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bootstrap
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;E:\nodejs;D:\nodejs\node_global\node_modules\npm;E:\Program Files\nodejs\node_global;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;F:\Program Files\Java\jdk1.8.0_172\bin;F:\Program Files\Java\jdk1.8.0_172\jre\bin;G:\xjq;C:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;F:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Android\Sdk\platform-tools;F:\Program Files\Git\cmd;F:\Python27\Scripts;F:\Go\bin;F:\python3.6\Scripts\;F:\python3.6\;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\;C:\Program Files\Microsoft VS Code\bin;G:\xjq\go\bin;F:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v2\npm-string_decoder-0.10.31-62e203bc41766c6c28c9fc84301dab1c5310fa94\package.json' -> 'G:\xjq\code\electronjs\node_modules\through2\node_modules\string_decoder\package.json'
+
+npm manifest: 
+  {
+    "name": "your-app",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "devDependencies": {
+      "electron": "2.0.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
